@@ -1,0 +1,63 @@
+// @import reset
+// body
+//     font-family: 'Montserrat', sans-serif
+
+.container
+    max-width: 1200px
+    padding: 0 15px
+    width: 100%
+    margin: 0 auto
+.catalog-items
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+
+.catalog-item
+    background: #F6F7F8
+    border-radius: 25px
+    padding: 40px
+    &__title
+        max-width: 384px
+        width: 100%
+        margin-bottom: 40px
+        font-weight: 700
+        font-size: 25px
+        line-height: 30px
+        color: #000000
+    &__list
+        list-style: disc
+        color: rgba(227, 6, 19, 0.7)
+        padding-left: 18px
+    &__list li:not(:last-child)
+        margin-bottom: 20px
+    &__link
+        position: relative
+        font-weight: 500
+        font-size: 18px
+        line-height: 22px
+        color: #000000
+        text-decoration: none
+        transition: color .3s
+        &:hover
+            color: rgba(227, 6, 19, 0.7)
+
+@media (max-width: 700px)
+    .catalog-items
+        display: flex
+        flex-direction: column
+        grid-column-gap: 0px
+        grid-row-gap: 0px
+    .catalog-item
+        &:not(:last-child)
+            margin-bottom: 30px
+        &__title
+            margin-bottom: 28px
+@media (max-width: 700px)
+    .catalog-item
+        &__title
+            font-size: 18px
+            line-height: 26px
+        &__link
+            font-size: 16px
+            line-height: 20px
